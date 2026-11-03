@@ -21,7 +21,9 @@ extern "C"
 #endif
 
 #include "rmw/macros.h"
+#include "rmw/ret_types.h"
 #include "rmw/types.h"
+#include "rmw/visibility_control.h"
 
 #define RMW_NODE_NAME_VALID 0
 #define RMW_NODE_NAME_INVALID_IS_EMPTY_STRING 1
@@ -83,7 +85,7 @@ rmw_validate_node_name(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given node name is valid.
+/// Determine if a given node name is valid.
 /**
  * This is an overload with an extra parameter for the length of node_name.
  *

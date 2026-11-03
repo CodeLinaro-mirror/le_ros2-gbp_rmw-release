@@ -21,8 +21,10 @@ extern "C"
 #endif
 
 #include "rmw/macros.h"
+#include "rmw/ret_types.h"
 #include "rmw/types.h"
 #include "rmw/validate_full_topic_name.h"
+#include "rmw/visibility_control.h"
 
 #define RMW_NAMESPACE_VALID 0
 #define RMW_NAMESPACE_INVALID_IS_EMPTY_STRING 1
@@ -97,7 +99,7 @@ rmw_validate_namespace(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given namespace is valid.
+/// Determine if a given namespace is valid.
 /**
  * This is an overload with an extra parameter for the length of namespace_.
  * If a non RMW_RET_OK return value is returned, the RMW error message will be set.

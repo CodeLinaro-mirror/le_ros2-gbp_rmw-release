@@ -14,8 +14,10 @@
 
 #include "rmw/names_and_types.h"
 
+#include "rcutils/error_handling.h"
 #include "rcutils/logging_macros.h"
 #include "rcutils/macros.h"
+#include "rcutils/types/rcutils_ret.h"
 #include "rcutils/types/string_array.h"
 #include "rmw/error_handling.h"
 #include "rmw/convert_rcutils_ret_to_rmw_ret.h"
@@ -24,11 +26,8 @@
 rmw_names_and_types_t
 rmw_get_zero_initialized_names_and_types(void)
 {
-  static rmw_names_and_types_t zero = {
-    .names = {0, NULL, {NULL, NULL, NULL, NULL, NULL}},
-    .types = NULL,
-  };
-  zero.names = rcutils_get_zero_initialized_string_array();
+  // All members are initialized to 0 or NULL by C99 6.7.8/10.
+  static const rmw_names_and_types_t zero;
   return zero;
 }
 
@@ -61,7 +60,7 @@ rmw_names_and_types_init(
   RCUTILS_CAN_RETURN_WITH_ERROR_OF(RMW_RET_INVALID_ARGUMENT);
   RCUTILS_CAN_RETURN_WITH_ERROR_OF(RMW_RET_BAD_ALLOC);
 
-  if (!allocator) {
+  if (!rcutils_allocator_is_valid(allocator)) {
     RMW_SET_ERROR_MSG("allocator is null");
     return RMW_RET_INVALID_ARGUMENT;
   }

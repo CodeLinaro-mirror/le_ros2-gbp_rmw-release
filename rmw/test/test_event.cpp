@@ -14,12 +14,14 @@
 
 #include "gmock/gmock.h"
 #include "rmw/event.h"
+#include "rmw/ret_types.h"
 
 TEST(rmw_event, get_zero_initialized_event)
 {
   const rmw_event_t actual = rmw_get_zero_initialized_event();
   EXPECT_EQ(nullptr, actual.implementation_identifier);
   EXPECT_EQ(nullptr, actual.data);
+  EXPECT_EQ(0, RMW_EVENT_INVALID);
   EXPECT_EQ(RMW_EVENT_INVALID, actual.event_type);
 }
 

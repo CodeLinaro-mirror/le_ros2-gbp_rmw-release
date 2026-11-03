@@ -21,7 +21,9 @@ extern "C"
 #endif
 
 #include "rmw/macros.h"
+#include "rmw/ret_types.h"
 #include "rmw/types.h"
+#include "rmw/visibility_control.h"
 
 #define RMW_TOPIC_VALID 0
 #define RMW_TOPIC_INVALID_IS_EMPTY_STRING 1
@@ -89,7 +91,7 @@ rmw_validate_full_topic_name(
   int * validation_result,
   size_t * invalid_index);
 
-/// Deterimine if a given topic name is valid.
+/// Determine if a given topic name is valid.
 /**
  * This is an overload with an extra parameter for the length of topic_name.
  *

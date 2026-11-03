@@ -12,11 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <cstddef>
 #include <string>
 
 #include "gmock/gmock.h"
 
 #include "rmw/error_handling.h"
+#include "rmw/ret_types.h"
 #include "rmw/validate_namespace.h"
 
 TEST(test_validate_namespace, invalid_parameters) {
@@ -24,8 +26,10 @@ TEST(test_validate_namespace, invalid_parameters) {
   size_t invalid_index;
   rmw_ret_t ret = rmw_validate_namespace(nullptr, &validation_result, &invalid_index);
   ASSERT_EQ(RMW_RET_INVALID_ARGUMENT, ret);
+  rmw_reset_error();
   ret = rmw_validate_namespace("/test", nullptr, &invalid_index);
   ASSERT_EQ(RMW_RET_INVALID_ARGUMENT, ret);
+  rmw_reset_error();
 
   // name is null pointer,
   ret = rmw_validate_namespace_with_size(nullptr, 0u, &validation_result, &invalid_index);

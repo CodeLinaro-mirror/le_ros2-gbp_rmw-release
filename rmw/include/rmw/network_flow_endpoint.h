@@ -20,9 +20,6 @@ extern "C"
 {
 #endif
 
-#include <stdint.h>
-
-#include "rmw/ret_types.h"
 #include "rmw/types.h"
 #include "rmw/visibility_control.h"
 

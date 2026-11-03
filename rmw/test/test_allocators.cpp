@@ -14,7 +14,6 @@
 
 #include "gmock/gmock.h"
 #include "rmw/allocators.h"
-#include "rmw/types.h"
 
 TEST(test_rmw_allocators, rmw_allocate_free) {
   void * ptr = rmw_allocate(100u);

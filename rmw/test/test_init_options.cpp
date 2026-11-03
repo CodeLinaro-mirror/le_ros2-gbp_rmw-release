@@ -13,9 +13,7 @@
 // limitations under the License.
 
 #include "gmock/gmock.h"
-#include "rmw/discovery_options.h"
 #include "rmw/init_options.h"
-#include "rmw/security_options.h"
 
 TEST(rmw_init_options, get_zero_initialized_init_options)
 {

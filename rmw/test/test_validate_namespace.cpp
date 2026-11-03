@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <cstddef>
 #include <string>
 
 #include "gmock/gmock.h"
 
 #include "rmw/error_handling.h"
-#include "rmw/ret_types.h"
 #include "rmw/validate_namespace.h"
 
 TEST(test_validate_namespace, invalid_parameters) {

@@ -14,7 +14,6 @@
 
 #include "gmock/gmock.h"
 #include "rmw/event.h"
-#include "rmw/ret_types.h"
 
 TEST(rmw_event, get_zero_initialized_event)
 {

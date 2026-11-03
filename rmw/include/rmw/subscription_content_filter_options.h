@@ -22,7 +22,6 @@ extern "C"
 
 #include "rcutils/allocator.h"
 #include "rcutils/types.h"
-#include "rcutils/types/string_array.h"
 
 #include "rmw/macros.h"
 #include "rmw/ret_types.h"

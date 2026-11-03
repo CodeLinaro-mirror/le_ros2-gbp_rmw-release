@@ -14,10 +14,6 @@
 
 #include "rmw/topic_endpoint_info.h"
 
-#include <stddef.h>
-#include <string.h>
-
-#include "rcutils/error_handling.h"
 #include "rcutils/macros.h"
 #include "rcutils/strdup.h"
 #include "rmw/error_handling.h"

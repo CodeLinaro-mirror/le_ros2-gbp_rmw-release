@@ -2,26 +2,15 @@
 Changelog for package rmw
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-7.11.3 (2026-11-03)
+7.10.3 (2026-11-03)
 -------------------
-* Remove custom ament_cppcheck usage. (`#436 <https://github.com/ros2/rmw/issues/436>`_)
-* Use the SPDX identifier Apache-2.0 in package.xml license tags (`#430 <https://github.com/ros2/rmw/issues/430>`_)
-* Include what you use (`#429 <https://github.com/ros2/rmw/issues/429>`_)
-* Contributors: Alejandro Hernández Cordero, Chris Lalancette, Michael Carroll
+* Only apply fvisibility-inlines-hidden when language is CXX (`#418 <https://github.com/ros2/rmw/issues/418>`_) (`#435 <https://github.com/ros2/rmw/issues/435>`_)
+* Contributors: mergify[bot]
 
-7.11.2 (2026-09-07)
+7.10.2 (2026-08-31)
 -------------------
-* Add missing stdbool.h include to time.h (`#423 <https://github.com/ros2/rmw/issues/423>`_)
+* Add missing stdbool.h include to time.h (`#425 <https://github.com/ros2/rmw/issues/425>`_)
 * Contributors: banerjs-overland
-
-7.11.1 (2026-07-15)
--------------------
-* use C++ 20 in default. (`#422 <https://github.com/ros2/rmw/issues/422>`_)
-* Only apply fvisibility-inlines-hidden when language is CXX (`#418 <https://github.com/ros2/rmw/issues/418>`_)
-* Contributors: Maurice Alexander Purnawan, Tomoya Fujita
-
-7.11.0 (2026-05-06)
--------------------
 
 7.10.1 (2026-04-09)
 -------------------

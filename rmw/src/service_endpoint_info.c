@@ -16,7 +16,6 @@
 #include <stddef.h>
 #include <string.h>
 
-#include "rcutils/error_handling.h"
 #include "rcutils/macros.h"
 #include "rcutils/strdup.h"
 

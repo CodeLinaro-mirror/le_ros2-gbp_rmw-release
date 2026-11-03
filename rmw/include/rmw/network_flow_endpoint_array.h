@@ -22,9 +22,7 @@ extern "C"
 
 #include "rcutils/allocator.h"
 
-#include "rmw/macros.h"
 #include "rmw/network_flow_endpoint.h"
-#include "rmw/ret_types.h"
 #include "rmw/types.h"
 #include "rmw/visibility_control.h"
 
